@@ -1,0 +1,117 @@
+# ======================================================
+# Node & Package Managers
+# ======================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package lock files (optional – uncomment if one is used)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+uploads/videos/
+uploads/
+uploads/videos/*.mkv
+
+
+
+# ======================================================
+# Environment variables
+# ======================================================
+.env
+.env.*
+!.env.example
+
+# ======================================================
+# Logs
+# ======================================================
+logs/
+*.log
+*.log.*
+debug.log
+
+# ======================================================
+# Build outputs
+# ======================================================
+dist/
+build/
+out/
+coverage/
+
+# ======================================================
+# Prisma
+# ======================================================
+# Prisma client (generated)
+prisma/generated/
+generated/
+generated/prisma/
+/generated/prisma
+
+# Migrations (keep these unless you want to ignore them!)
+# prisma/migrations/
+
+# ======================================================
+# TypeScript
+# ======================================================
+*.tsbuildinfo
+
+# ======================================================
+# Framework-specific
+# ======================================================
+
+# --- Next.js ---
+.next/
+.vercel/
+
+# --- Remix ---
+.build/
+.remix/
+
+# --- Nuxt ---
+.nuxt/
+.output/
+
+# --- Vite ---
+.vite/
+
+# --- SvelteKit ---
+.svelte-kit/
+
+# --- Astro ---
+.astro/
+
+# --- React Native ---
+.expo/
+.expo-shared/
+android/
+ios/
+
+# ======================================================
+# Cache
+# ======================================================
+.cache/
+.temp/
+tmp/
+temp/
+
+# ======================================================
+# OS / Editor Files
+# ======================================================
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ======================================================
+# Misc
+# ======================================================
+*.local
+*.swp
+*.swo
+*.bak

@@ -127,9 +127,13 @@ router.post('/:id/enroll', authMiddleware, async (req, res) => {
   // DELETE course
   router.delete('/:id', authMiddleware, async (req, res) => {
     try {
-      const course = await Course.findByPk(req.params.id);
+      const courseId = parseInt(req.params.id, 10); 
+      const course = await Course.findByPk(courseId);
       if (!course) return res.status(404).json({ error: 'Course not found' });
 
+      await CourseProgress.destroy({ where: { courseId } });
+      await Enrollment.destroy({ where: { courseId } });
+      
       await course.destroy();
       res.json({ message: 'Course deleted' });
     } catch (err) {

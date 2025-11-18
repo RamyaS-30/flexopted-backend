@@ -22,6 +22,7 @@ export default (Course, CourseProgress, Enrollment) => {
 
   const upload = multer({ 
   storage,
+  limits: { fileSize: 500 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
     const allowedExts = ['.mp4', '.avi', '.mov', '.mkv'];
